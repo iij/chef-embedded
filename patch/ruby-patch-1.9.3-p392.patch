@@ -1,0 +1,13 @@
+diff -crN ruby-1.9.3-p392.orig/lib/mkmf.rb ruby-1.9.3-p392/lib/mkmf.rb
+*** ruby-1.9.3-p392.orig/lib/mkmf.rb	2013-01-11 17:11:43.000000000 +0900
+--- ruby-1.9.3-p392/lib/mkmf.rb	2013-04-17 12:28:03.144288580 +0900
+***************
+*** 709,714 ****
+--- 709,715 ----
+  # @return true when the executable exits successfully, false when it fails, or
+  #         nil when preprocessing, compilation or link fails.
+  def try_run(src, opt = "", &b)
++   return true
+    if try_link0(src, opt, &b)
+      xsystem("./conftest")
+    else

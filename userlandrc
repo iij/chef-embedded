@@ -1,0 +1,26 @@
+#
+# userlandrc
+#
+
+DEPLOY_PREFIX=${DEPLOY_PREFIX:-/opt/chef}
+
+# URL of ruby
+RUBY_VER=${RUBY_VER:-1.9.3-p392}
+RUBY_BASE=${RUBY_BASE:-ftp://ftp.ruby-lang.org/pub/ruby/1.9}
+RUBY_REPO=${RUBY_REPO:-${RUBY_BASE}/ruby-${RUBY_VER}.tar.bz2}
+RUBY_PATCH=${RUBY_PATCH:-patch/ruby-patch-${RUBY_VER}.patch}
+
+# URL of zlib
+ZLIB_VER=${ZLIB_VER:-1.2.3}
+ZLIB_URL=${ZLIB_BASE:-https://github.com/madler/zlib.git}
+
+# URL of OpenSSL
+OPENSSL_VER=${OPENSSL_VER:-0.9.8b}
+OPENSSL_VER_MINOR=${OPENSSL_VER_MINOR:-9.8b}
+OPENSSL_BASE=${OPENSSL_BASE:-http://www.openssl.org/source}
+OPENSSL_REPO=${OPENSSL_REPO:-${OPENSSL_BASE}/openssl-${OPENSSL_VER}.tar.gz}
+
+# URL of libyaml
+LIBYAML_VER=${LIBYAML_VER:-0.1.4}
+LIBYAML_BASE=${LIBYAML_BASE:-http://pyyaml.org/download/libyaml}
+LIBYAML_REPO=${LIBYAML_REPO:-${LIBYAML_BASE}/yaml-${LIBYAML_VER}.tar.gz}

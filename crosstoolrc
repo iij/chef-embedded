@@ -1,0 +1,20 @@
+#
+# crosstoolrc
+#
+# Find the other rc files
+RC_DIR=$(cd $(dirname "$BASH_SOURCE") && pwd)
+
+# Destination path for installation
+DEST=${TOP_DIR}
+
+# URL of crosstool-ng
+CROSSTOOL_VER=${CROSSTOOL_VER:-1.18.0}
+CROSSTOOL_BASE=${CROSSTOOL_BASE:-http://crosstool-ng.org/download/crosstool-ng}
+CROSSTOOL_REPO=${CROSSTOOL_REPO:-${CROSSTOOL_BASE}/crosstool-ng-${CROSSTOOL_VER}.tar.bz2}
+
+# allow local overrides of env variables, including repo config
+if [ -f $RC_DIR/localrc ]; then
+    source $RC_DIR/localrc
+fi
+
+TARGET_ARCH=${TARGET_ARCH:-powerpc-unknown-linux-gnu}

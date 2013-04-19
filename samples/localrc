@@ -1,0 +1,4 @@
+
+# Example configuration for pica8 pronto
+TARGET_ARCH=powerpc-unknown_nofpu-linux-gnu
+NJOBS=4
