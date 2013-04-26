@@ -41,6 +41,9 @@ toolchain_build() {
     chdir $BUILD_DIR/work.ct
     do_job $BUILD_DIR/ct/bin/ct-ng $TARGET_ARCH
     echo CT_PREFIX_DIR="$BUILD_DIR/x-tools/\${CT_TARGET}" >> $BUILD_DIR/work.ct/.config
+    echo CT_CC_LANG_JAVA=n >> $BUILD_DIR/work.ct/.config
+    echo CT_CC_LANG_ADA=n >> $BUILD_DIR/work.ct/.config
+    echo CT_CC_LANG_FORTRAN=n >> $BUILD_DIR/work.ct/.config
     #echo "CT_CC_GCC_SYSTEM_ZLIB=\"y\"" >> $BUILD_DIR/work.ct/.config
     do_job_verbose $BUILD_DIR/ct/bin/ct-ng build -j$NJOBS
 }
